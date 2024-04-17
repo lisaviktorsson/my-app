@@ -12,7 +12,7 @@ const config = {
 
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: [preprocess(), vitePreprocess(), ],
+	preprocess: [vitePreprocess(), ],
 
 	kit: {
 		adapter: adapter({
@@ -24,10 +24,7 @@ const config = {
 			base: '/my-app', // Your repository name
 	},
 		
-	},prerender: {
-			default: true
 	},
-	
 
 	extensions: ['.svelte', '.md', '.svx'],
 	
