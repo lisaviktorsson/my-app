@@ -24,10 +24,37 @@ const config = {
 	},prerender: {
 			default: true
 	},
-	
+	vitePlugin: {
+		
+			inspector: {
+				toggleKeyCombo: 'meta-shift',
+				holdMode: true,
+				showToggleButton: 'always',
+				toggleButtonPos: 'bottom-right'
+			}
+		
+	},
 
-	extensions: ['.svelte'],
-	
+	extensions: ['.svelte',],
+	remarkPlugins: [
+		[
+			remarkGithub,
+			{
+				// Use your own repository
+				repository: 'https://github.com/williamviktorsson/williamviktorsson.github.io.git'
+			}
+		],
+		remarkAbbr
+	],
+	rehypePlugins: [
+		rehypeSlug,
+		[
+			rehypeAutolinkHeadings,
+			{
+				behavior: 'wrap'
+			}
+		]
+	]
 
 };
 
