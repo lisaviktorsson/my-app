@@ -24,7 +24,7 @@ const config = {
 		
 	},
 
-	extensions: ['.svelte', '.md', '.svx'],
+	extensions: ['.svelte'],
 	
 	
 };
