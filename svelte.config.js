@@ -18,11 +18,8 @@ const config = {
 		adapter: adapter({
 			pages: 'docs',
 			assets: 'docs',
-			fallback: null
 		}),
-		paths: {
-			base: '/my-app', // Your repository name
-	},
+		
 		
 	},prerender: {
 			default: true
