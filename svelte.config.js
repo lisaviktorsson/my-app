@@ -18,8 +18,11 @@ const config = {
 		adapter: adapter({
 			pages: 'docs',
 			assets: 'docs',
+			fallback: null
 		}),
-		
+		paths: {
+			base: '/my-app', // Your repository name
+	},
 		
 	},prerender: {
 			default: true
@@ -35,7 +38,7 @@ const config = {
 		
 	},
 
-	extensions: ['.svelte',],
+	extensions: ['.svelte', '.md', '.svx'],
 	remarkPlugins: [
 		[
 			remarkGithub,
