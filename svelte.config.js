@@ -20,9 +20,7 @@ const config = {
 			assets: 'docs',
 			fallback: null
 		}),
-		paths: {
-			base: '/my-app', // Your repository name
-	},
+		
 		
 	},
 
