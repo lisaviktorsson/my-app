@@ -20,7 +20,9 @@ const config = {
 			assets: 'docs',
 			fallback: null
 		}),
-		
+		paths: {
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+		}
 		
 	},
 
