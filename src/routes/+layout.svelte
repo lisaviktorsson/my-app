@@ -35,7 +35,6 @@
 				<a
 					class="btn btn-sm variant-ghost-surface"
 					href="tester"
-					rel="referrer"
 				>
 					Tester
 				</a>
