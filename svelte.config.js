@@ -1,9 +1,4 @@
 import adapter from '@sveltejs/adapter-static';
-import preprocess from 'svelte-preprocess';
-import remarkGithub from 'remark-github';
-import remarkAbbr from 'remark-abbr';
-import rehypeSlug from 'rehype-slug';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 
@@ -13,6 +8,7 @@ const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
 	preprocess: [vitePreprocess(), ],
+	extensions: ['.svelte'],
 
 	kit: {
 		adapter: adapter({
@@ -22,10 +18,6 @@ const config = {
 		}),
 		
 	},
-
-	extensions: ['.svelte'],
-	
-	
 };
 
 export default config;
