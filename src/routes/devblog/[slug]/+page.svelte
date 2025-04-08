@@ -1,22 +1,11 @@
-<!-- src/routes/devblog/[slug]/+page.svelte -->
+<!-- src/routes/devblog/[path]/+page.svelte -->
 <script>
-	import { onMount } from 'svelte';
-
-	export let data;
-	let Content;
-
-	onMount(async () => {
-		const module = await import(`../${data.slug}.svx`);
-		Content = module.default;
-	});
+  /** @type {import('./$types').PageData} */
+  export let data;
 </script>
 
-{#if Content}
-	<article>
-		<h1>{data.metadata.title}</h1>
-		<p><em>{data.metadata.date}</em></p>
-		<Content />
-	</article>
-{:else}
-	<p>Loading post...</p>
-{/if}
+<article>
+  <h1>{data.title}</h1>
+  <p>Published: {data.date}</p>
+  <svelte:component this={data.content} />
+</article>
