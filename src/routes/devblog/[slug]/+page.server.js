@@ -1,6 +1,10 @@
 // src/routes/devblog/[slug]/+page.server.js
 import { error } from '@sveltejs/kit';
 
+
+export const ssr = false;
+export const prerender = false;
+
 export async function load({ params }) {
 	const modules = import.meta.glob('../*.svx');
 

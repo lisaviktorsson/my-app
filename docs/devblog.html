@@ -8,7 +8,6 @@
 		<link href="./_app/immutable/assets/0.DjpZ9fYx.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/app.CPc9w_YA.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/ProgressBar.Cirlo5Z8.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/12.BRCw7wv8.css" rel="stylesheet">
 		<link rel="modulepreload" href="./_app/immutable/entry/start.eIreEJtj.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/entry.Co5Kh2Hi.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.CbksUgmw.js">
@@ -19,10 +18,11 @@
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.CKmXrqYi.js">
 		<link rel="modulepreload" href="./_app/immutable/nodes/0.wW0JjCee.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.GyAeeTib.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/12.BP8gE_7X.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/4.fwXi9l5d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/each.D6YF6ztN.js">
 	</head>
 	<body data-sveltekit-preload-data="hover" data-theme="crimson">
-		<div style="display: contents" class="h-full overflow-hidden">   <div id="appShell" class="w-full h-full flex flex-col overflow-hidden " data-testid="app-shell"> <header id="shell-header" class="flex-none z-10"> <div class="app-bar flex flex-col bg-surface-100-800-token  space-y-4 p-4  " data-testid="app-bar" role="toolbar" aria-label="" aria-labelledby=""> <div class="app-bar-row-main grid items-center grid-cols-[auto_1fr_auto] gap-4 "> <div class="app-bar-slot-lead flex-none flex justify-between items-center "><strong class="text-xl uppercase" data-svelte-h="svelte-1byfaci">Tester</strong></div>  <div class="app-bar-slot-default flex-auto "></div>  <div class="app-bar-slot-trail flex-none flex items-center space-x-4 "><a class="btn btn-sm variant-ghost-surface" href="tester" data-svelte-h="svelte-1sxymwm">Tester</a> <a class="btn btn-sm variant-ghost-surface" href="https://github.com/skeletonlabs/skeleton" target="_blank" rel="noreferrer" data-svelte-h="svelte-yebxv7">GitHub</a> </div></div>  </div> </header>  <div class="flex-auto w-full h-full flex overflow-hidden">   <div id="page" class=" flex-1 overflow-x-hidden flex flex-col" style="scrollbar-gutter: auto;">   <main id="page-content" class="flex-auto ">  <div class="coin svelte-1wiort7  not-flipped" data-svelte-h="svelte-k5978z"><div class="side front svelte-1wiort7">Heads</div> <div class="side back svelte-1wiort7">Tails</div> </div></main>  </div>  </div>  </div> 
+		<div style="display: contents" class="h-full overflow-hidden">   <div id="appShell" class="w-full h-full flex flex-col overflow-hidden " data-testid="app-shell"> <header id="shell-header" class="flex-none z-10"> <div class="app-bar flex flex-col bg-surface-100-800-token  space-y-4 p-4  " data-testid="app-bar" role="toolbar" aria-label="" aria-labelledby=""> <div class="app-bar-row-main grid items-center grid-cols-[auto_1fr_auto] gap-4 "> <div class="app-bar-slot-lead flex-none flex justify-between items-center "><strong class="text-xl uppercase" data-svelte-h="svelte-1byfaci">Tester</strong></div>  <div class="app-bar-slot-default flex-auto "></div>  <div class="app-bar-slot-trail flex-none flex items-center space-x-4 "><a class="btn btn-sm variant-ghost-surface" href="tester" data-svelte-h="svelte-1sxymwm">Tester</a> <a class="btn btn-sm variant-ghost-surface" href="https://github.com/skeletonlabs/skeleton" target="_blank" rel="noreferrer" data-svelte-h="svelte-yebxv7">GitHub</a> </div></div>  </div> </header>  <div class="flex-auto w-full h-full flex overflow-hidden">   <div id="page" class=" flex-1 overflow-x-hidden flex flex-col" style="scrollbar-gutter: auto;">   <main id="page-content" class="flex-auto ">   <h1 data-svelte-h="svelte-1ryx81f">Devblog</h1> <ul><li><a href="/devblog/post1"><strong>Hello, SVX World!</strong> — 2025-04-08</a> </li></ul></main>  </div>  </div>  </div> 
 			
 			<script>
 				{
@@ -32,14 +32,14 @@
 
 					const element = document.currentScript.parentElement;
 
-					const data = [null,null];
+					const data = [null,{"type":"data","data":{posts:[{slug:"post1",title:"Hello, SVX World!",date:"2025-04-08"}]},"uses":{}}];
 
 					Promise.all([
 						import("./_app/immutable/entry/start.eIreEJtj.js"),
 						import("./_app/immutable/entry/app.BnBJohUb.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
-							node_ids: [0, 12],
+							node_ids: [0, 4],
 							data,
 							form: null,
 							error: null
