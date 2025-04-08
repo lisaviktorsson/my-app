@@ -12,9 +12,6 @@ export async function load({ params }) {
 		path.includes(`${params.slug}.svx`)
 	);
 
-	if (!match) {
-		throw error(404, 'Post not found');
-	}
 
 	const postModule = await match[1]();
 
