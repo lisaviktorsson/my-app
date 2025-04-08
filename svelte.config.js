@@ -8,10 +8,7 @@ const config = {
 
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: [vitePreprocess(), mdsvex({
-		extension: '.svx',
-		
-	})],
+	preprocess: [vitePreprocess(), mdsvex()],
 	extensions: ['.svelte', '.svx'],
 
 	kit: {

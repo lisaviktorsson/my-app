@@ -1,24 +1,15 @@
 <!-- src/routes/devblog/[slug]/+page.svelte -->
 <script>
 	import { onMount } from 'svelte';
-	import { error } from '@sveltejs/kit';
 
 	export let data;
 	let Content;
 
 	onMount(async () => {
-		try {
-			const module = await import(`../${data.slug}.svx`);
-			Content = module.default;
-		} catch (err) {
-			throw error(500, 'Failed to load post');
-		}
+		const module = await import(`../${data.slug}.svx`);
+		Content = module.default;
 	});
 </script>
-
-<svelte:head>
-	<title>{data.metadata.title}</title>
-</svelte:head>
 
 {#if Content}
 	<article>
