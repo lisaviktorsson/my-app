@@ -1,0 +1,8 @@
+---
+title: "Hello, SVX World!"
+date: "2025-04-08"
+---
+
+# Welcome
+
+This is my first `.svx` blog post — with **Markdown** and `<svelte:component>` power!
