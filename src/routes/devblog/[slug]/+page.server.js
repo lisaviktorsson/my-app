@@ -5,6 +5,7 @@ import { error } from '@sveltejs/kit';
 export const ssr = false;
 export const prerender = false;
 
+
 export async function load({ params }) {
 	const modules = import.meta.glob('../*.svx');
 
@@ -14,7 +15,7 @@ export async function load({ params }) {
 
 
 	const postModule = await match[1]();
-
+  console.log(postModule.metadata);
 	return {
 		slug: params.slug,
 		metadata: postModule.metadata
