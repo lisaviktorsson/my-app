@@ -1,0 +1,1 @@
+import{s as t}from"./078Onj7x.js";import{S as o,i as l}from"./B3TwOt2K.js";class s extends o{constructor(e){super(),l(this,e,null,null,t,{})}}const _=Object.freeze(Object.defineProperty({__proto__:null,default:s},Symbol.toStringTag,{value:"Module"}));export{s as P,_};
