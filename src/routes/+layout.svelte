@@ -21,7 +21,24 @@
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
+
+	// Dynamic routes
+	const routes = import.meta.glob('./**/+page.svelte', { eager: true });
+	const navRoutes = Object.keys(routes)
+		.map(path => {
+			// Extract route name from path: './(routename)/+page.svelte' -> 'routename'
+			const match = path.match(/\.\/([^/]+)\/\+page\.svelte/);
+			return match ? match[1] : null;
+		})
+		.filter(route => route !== null)
+		.sort();
 </script>
+
+
+
+
+
+
 
 <!-- App Shell -->
 <AppShell>
@@ -29,26 +46,30 @@
 		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
+
 				<strong class="text-xl uppercase">Tester</strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
-				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="tester"
-				>
-					Tester
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="https://github.com/skeletonlabs/skeleton"
-					target="_blank"
-					rel="noreferrer"
-				>
-					GitHub
-				</a>
+					{#each navRoutes as route}
+		<a class="btn btn-sm variant-ghost-surface"
+		
+		href="/{route}" >
+			{route.charAt(0).toUpperCase() + route.slice(1)}
+		</a>
+	{/each}
+			
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
 	<!-- Page Route Content -->
 	<slot />
 </AppShell>
+
+
+<style>
+	/* App Shell overrides */
+	:global(.app-bar) {
+		height: 8vh;
+
+	}
+</style>

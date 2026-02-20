@@ -47,13 +47,14 @@
 		</div>
 	{/each}
 </div>
-
 <style>
 	.container {
 		background: #fff6c2;
 		padding: 10px;
 		max-width: 320px;
 		margin: 2em auto;
+		border-radius: 8px;
+    
 	}
 
 	.item {
@@ -61,12 +62,15 @@
 		background: #eee;
 		padding: 12px;
 		margin-bottom: 8px;
-		cursor: grab;
+		cursor: grab; /* default state */
 		border-radius: 4px;
 		transition: transform 0.2s ease;
+		user-select: none;
 	}
 
+	/* While dragging */
 	.item.dragging {
 		opacity: 0.5;
+		cursor: grabbing; /* change cursor */
 	}
 </style>
