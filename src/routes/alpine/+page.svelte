@@ -12,7 +12,7 @@ const gates = [
   let obstacleChance = 0.95, minGateDistance = 15
   let grid = []
   let gameover = false, game = false, timer = 3
-  let skiier = {row: 2, col:5,img: "alpine.png"}
+  let skiier = {row: 4, col:5,img: "alpine.png"}
   let dx = 0, dy = 0, score = 0, currentGate = 0, currentGateDistance = 0, interval
 
 
@@ -224,6 +224,7 @@ const gates = [
   }
  
 	.tile { 
+    border: solid 1px gray;
     position: relative;
     width: 100%;
     height: 100%;

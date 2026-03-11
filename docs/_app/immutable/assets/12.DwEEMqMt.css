@@ -1,0 +1,1 @@
+.container.svelte-naunby{background:#fff6c2;padding:10px;max-width:320px;margin:2em auto;border-radius:8px}.item.svelte-naunby{width:100%;background:#eee;padding:12px;margin-bottom:8px;cursor:grab;border-radius:4px;transition:transform .2s ease;-webkit-user-select:none;-moz-user-select:none;user-select:none}.item.dragging.svelte-naunby{opacity:.5;cursor:grabbing}

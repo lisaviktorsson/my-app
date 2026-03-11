@@ -51,12 +51,10 @@
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 					{#each navRoutes as route}
-		<a class="btn btn-sm variant-ghost-surface"
-		
-		href="/{route}" >
-			{route.charAt(0).toUpperCase() + route.slice(1)}
-		</a>
-	{/each}
+					<a href="/{route}" >
+							{route.charAt(0).toUpperCase() + route.slice(1)}
+						</a>
+				{/each}
 			
 			</svelte:fragment>
 		</AppBar>
@@ -72,4 +70,9 @@
 		height: 8vh;
 
 	}
+
+	:global(.app-bar-slot-trail){
+		display: flex;
+	}
+	
 </style>
