@@ -17,7 +17,7 @@
 <main>
   <iframe
     bind:this={iframe}
-    src={resolve("/index.html")}
+    src="game/index.html"
     width="960"
     height="540"
     allow="fullscreen"
