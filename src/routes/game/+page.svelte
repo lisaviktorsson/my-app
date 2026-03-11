@@ -1,5 +1,7 @@
 
 <script>
+	import { resolve } from "$app/paths";
+
   let iframe;
   function makeFullscreen() {
     if (iframe?.requestFullscreen) {
@@ -15,7 +17,7 @@
 <main>
   <iframe
     bind:this={iframe}
-    src="/index.html"
+    src={resolve("/index.html")}
     width="960"
     height="540"
     allow="fullscreen"
