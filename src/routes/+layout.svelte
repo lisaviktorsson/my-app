@@ -1,7 +1,7 @@
 <script>
 	import '../app.postcss';
 	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
-
+	import {base} from '$app/paths'
 	// Highlight JS
 	import hljs from 'highlight.js/lib/core';
 	import 'highlight.js/styles/github-dark.css';
@@ -51,7 +51,7 @@
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 					{#each navRoutes as route}
-					<a href="/{route}" >
+					<a href="{base}/{route}" >
 							{route.charAt(0).toUpperCase() + route.slice(1)}
 						</a>
 				{/each}
